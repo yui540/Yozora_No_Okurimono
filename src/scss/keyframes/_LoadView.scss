@@ -1,0 +1,55 @@
+@keyframes load-view__up-effect {
+  from { transform: translateY(0) }
+  to   { transform: translateY(calc(-100vh + -1vmin)); }
+}
+@keyframes load-view__sway-1 {
+  from { transform: translateX(-200%); }
+  to   { transform: translateX(200%); }
+}
+@keyframes load-view__sway-2 {
+  from { transform: translateX(-400%); }
+  to   { transform: translateX(400%); }
+}
+@keyframes load-view__sway-3 {
+  from { transform: translateX(-800%); }
+  to   { transform: translateX(800%); }
+}
+
+@keyframes load-view__hidden-message {
+  from { transform: rotate(0deg) scale(1); opacity: 1; }
+  to   { transform: rotate(-90deg) scale(0.6); opacity: 0; }
+}
+@keyframes load-view__show-message {
+  from { transform: rotate(90deg) scale(2); }
+  to   { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes load-view__rotate-line-1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(5deg); }
+}
+@keyframes load-view__rotate-line-2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-5deg); }
+}
+@keyframes load-view__rotate-line-1__sp {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(10deg); }
+}
+@keyframes load-view__rotate-line-2__sp {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-10deg); }
+}
+
+@keyframes load-view__end {
+  from { transform: rotate(-90deg); }
+  to   { transform: rotate(0deg); }
+}
+@keyframes load-view__end-1 {
+  from { transform: rotate(-90deg); }
+  to   { transform: rotate(0deg); }
+}
+@keyframes load-view__end-2 {
+  from { transform: rotate(90deg); }
+  to   { transform: rotate(0deg); }
+}
