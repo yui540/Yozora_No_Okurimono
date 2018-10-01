@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   changeChapter() {
-    dispatch(changeChapter('load'))
+    dispatch(changeChapter('top'))
   }
 })
 
