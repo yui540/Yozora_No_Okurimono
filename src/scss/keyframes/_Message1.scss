@@ -1,0 +1,18 @@
+@keyframes message-1__eye-1 {
+  from { transform: translateY(0%); }
+  to   { transform: translateY(-20%); }
+}
+@keyframes message-1__eye-2 {
+  from { transform: translateY(0%); }
+  to   { transform: translateY(20%); }
+}
+
+@keyframes message-1__show {
+  from { background-color: transparent; }
+  to   { background-color: #fff; }
+}
+
+@keyframes message-1__end {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}

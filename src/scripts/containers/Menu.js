@@ -1,18 +1,18 @@
 import { connect } from 'react-redux'
-import Top from '../components/Top'
-import { openMenu } from '../actions/menu'
+import Menu from '../components/Menu'
+import { closeMenu } from '../actions/menu'
 
 const mapStateToProps = state => ({
-  effect: state.menu.effect
+  menu: state.menu.menu
 })
 
 const mapDispatchToProps = dispatch => ({
-  openMenu() {
-    dispatch(openMenu())
+  closeMenu() {
+    dispatch(closeMenu())
   }
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Top)
+)(Menu)
