@@ -1,0 +1,8 @@
+@keyframes menu__rain {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(100vh); }
+}
+@keyframes menu__list {
+  from { transform: translateX(-20%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}

@@ -303,19 +303,19 @@
 
 .load-view__end {
   div:nth-child(1) {
-    &::before { animation: load-view__end-1 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.5s forwards; }
-    &::after  { animation: load-view__end-1 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.65s forwards; }
+    &::before { animation: load-view__end-1 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.4s forwards; }
+    &::after  { animation: load-view__end-1 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.55s forwards; }
   }
   div:nth-child(2) {
-    &::before { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.5s forwards; }
-    &::after  { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.65s forwards; }
+    &::before { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.4s forwards; }
+    &::after  { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.55s forwards; }
   }
   div:nth-child(3) {
-    &::before { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.5s forwards; }
-    &::after  { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.65s forwards; }
+    &::before { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.4s forwards; }
+    &::after  { animation: load-view__end-2 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.55s forwards; }
   }
   div:nth-child(4) {
-    &::before { animation: load-view__end-1 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.5s forwards; }
-    &::after  { animation: load-view__end 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.65s forwards; }
+    &::before { animation: load-view__end-1 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.4s forwards; }
+    &::after  { animation: load-view__end 0.6s cubic-bezier(0.1, 0.46, 0.07, 1) 5.55s forwards; }
   }
 }

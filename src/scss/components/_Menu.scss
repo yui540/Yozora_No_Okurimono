@@ -1,0 +1,144 @@
+.menu {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #009299;
+  overflow: hidden;
+  transform: translateY(-100%);
+}
+
+.menu__header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 18%;
+  transform: translateY(-100%);
+  z-index: 4;
+
+  .inner {
+    position: relative;
+    width: 100%; height: 75%;
+    background-color: #fff;
+
+    img {
+      position: absolute;
+      top: 50%; left: 50%;
+      display: block;
+      transform: translate(-50%, -50%);
+      @include pc-layout { height: 50%; }
+      @include sp-layout { height: 40%; }
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    box-sizing: border-box;
+    border: dashed 2px #009299;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    @include pc-layout {
+      top: 2.5vh; right: 2.5vh;
+      width: 10vh; height: 10vh;
+    }
+    @include sp-layout {
+      top: 1.5vh; right: 1.5vh;
+      width: 8vh; height: 8vh;
+    }
+
+    &::before, &::after {
+      content: ""; display: block;
+      position: absolute;
+      top: calc(50% - 1px); left: calc(50% - 30%);
+      width: 60%; height: 2px;
+      background-color: #009299;
+    }
+    &::before { transform: rotate(45deg); }
+    &::after  { transform: rotate(-45deg); }
+  }
+  .close-btn:hover { transform: scale(1.1); }
+
+  &::after {
+    content: ""; display: block;
+    width: 100%; height: 25%;
+    background-image: url(../images/menu/deco.svg);
+    background-size: auto 101%;
+    background-position: top center;
+    margin-top: -1px;
+  }
+}
+
+.menu__body {
+  position: absolute;
+  top: 12%; left: 0;
+  width: 100%; height: calc(100% - 12%);
+}
+
+.menu__rains,
+.menu__list {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+.menu__rains {
+  img {
+    position: absolute;
+    top: 0;
+    display: block;
+    transform: translateY(-100%);
+    @include pc-layout { height: 15vmin; }
+    @include sp-layout { height: 20vmin; }
+  }
+  img:nth-child(1) { left: 10%; }
+  img:nth-child(2) { left: 20%; }
+  img:nth-child(3) { left: 40%; }
+  img:nth-child(4) { left: 50%; }
+  img:nth-child(5) { left: 70%; }
+  img:nth-child(6) { left: 90%; }
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: block;
+    margin: 2vh 0;
+    opacity: 0;
+    @include pc-layout { height: 10vh; }
+    @include sp-layout { width: 100%; }
+  }
+  a { transition: all 0.3s ease 0s; }
+  a:hover { transform: scale(0.95); opacity: 0.8; }
+}
+
+
+/**************************************************************************
+  animation
+***************************************************************************/
+.menu[data-state="true"] {
+  animation: slide-bottom 0.6s cubic-bezier(0.83, 0, 0.12, 1.01) 0s forwards;
+  
+  .menu__header {
+    animation: slide-bottom 1s cubic-bezier(0.83, 0, 0.12, 1.01) 0.2s forwards;
+  }
+
+  .menu__list {
+    a:nth-child(1) img { animation: menu__list 0.9s cubic-bezier(0.12, 0.46, 0.18, 1.01) 0.9s forwards; }
+    a:nth-child(2) img { animation: menu__list 0.9s cubic-bezier(0.12, 0.46, 0.18, 1.01) 1.1s forwards; }
+    a:nth-child(3) img { animation: menu__list 0.9s cubic-bezier(0.12, 0.46, 0.18, 1.01) 1.3s forwards; }
+    a:nth-child(4) img { animation: menu__list 0.9s cubic-bezier(0.12, 0.46, 0.18, 1.01) 1.5s forwards; }
+  }
+
+  .menu__rains {
+    img:nth-child(1) { animation: menu__rain 2s cubic-bezier(0.92, 0.09, 0.92, 0.42) 2.4s infinite; }
+    img:nth-child(2) { animation: menu__rain 3s cubic-bezier(0.92, 0.09, 0.92, 0.42) 3.2s infinite; }
+    img:nth-child(3) { animation: menu__rain 4s cubic-bezier(0.92, 0.09, 0.92, 0.42) 4.0s infinite; }
+    img:nth-child(4) { animation: menu__rain 1.4s cubic-bezier(0.92, 0.09, 0.92, 0.42) 2s infinite; }
+    img:nth-child(5) { animation: menu__rain 1s cubic-bezier(0.92, 0.09, 0.92, 0.42) 2.8s infinite; }
+    img:nth-child(6) { animation: menu__rain 2.5s cubic-bezier(0.92, 0.09, 0.92, 0.42) 3.6s infinite; }
+  }
+}

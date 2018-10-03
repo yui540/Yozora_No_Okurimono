@@ -1,0 +1,174 @@
+.message-1,
+.message-2,
+.message-3 {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+
+  .inner {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    &::before {
+      content: ""; display: block;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #fff;
+      opacity: 0;
+    }
+
+    img {
+      position: absolute;
+      top: 50%; left: 50%;
+      display: block;
+      @include pc-layout { height: 5%; }
+      @include sp-layout { width: 95%; }
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    .eye {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      &::before, &::after {
+        content: ""; display: block;
+        width: 100%; height: 50%;
+        background-color: #000;
+      }
+      &::before { top: 0; transform: translateY(-100%); }
+      &::after  { bottom: 0; transform: translateY(100%); }
+    }
+  }
+}
+
+
+/********************************************************************************
+  animation
+*********************************************************************************/
+@include pc-layout {
+.message-1[data-num="1"] {
+  .inner {
+    &::before,
+    img {
+      animation:
+        fadein 0.01s ease 6.4s forwards,
+        fadeout 0.01s ease 7.2s forwards;
+    }
+    .eye {
+      &::before {
+        animation:
+          slide-bottom 0.4s ease-in-out 6s forwards,
+          message-1__eye-1 0.4s ease-in-out 6.4s 2 alternate forwards,
+          slide-bottom 0.4s ease-in-out 7.3s reverse forwards;
+      }
+      &::after {
+        animation:
+          slide-top 0.4s ease-in-out 6s forwards,
+          message-1__eye-2 0.4s ease-in-out 6.4s 2 alternate forwards,
+          message-1__end 0.4s ease-in-out 7.3s forwards;
+      }
+    }
+  }
+}
+.message-1[data-state="start"] {
+  .inner {
+    &::before, img { animation-play-state: running; }
+    .eye {
+      &::before, &::after { animation-play-state: running; }
+    }
+  }
+}
+.message-1[data-state="stop"] {
+  .inner {
+    &::before, img { animation-play-state: paused; }
+    .eye {
+      &::before, &::after { animation-play-state: paused; }
+    }
+  }
+}
+.message-2[data-num="2"] {
+  .inner {
+    &::before,
+    img {
+      animation:
+        fadein 0.01s ease 6.4s forwards,
+        fadeout 0.01s ease 7.2s forwards;
+    }
+    .eye {
+      &::before {
+        animation:
+          slide-bottom 0.4s ease-in-out 6s forwards,
+          message-1__eye-1 0.4s ease-in-out 6.4s 2 alternate forwards,
+          slide-bottom 0.4s ease-in-out 7.3s reverse forwards;
+      }
+      &::after {
+        animation:
+          slide-top 0.4s ease-in-out 6s forwards,
+          message-1__eye-2 0.4s ease-in-out 6.4s 2 alternate forwards,
+          message-1__end 0.4s ease-in-out 7.3s forwards;
+      }
+    }
+  }
+}
+.message-2[data-state="start"] {
+  .inner {
+    &::before, img { animation-play-state: running; }
+    .eye {
+      &::before, &::after { animation-play-state: running; }
+    }
+  }
+}
+.message-2[data-state="stop"] {
+  .inner {
+    &::before, img { animation-play-state: paused; }
+    .eye {
+      &::before, &::after { animation-play-state: paused; }
+    }
+  }
+}
+.message-3[data-num="3"] {
+  .inner {
+    &::before,
+    img {
+      animation:
+        fadein 0.01s ease 6.4s forwards,
+        fadeout 0.01s ease 7.2s forwards;
+    }
+    .eye {
+      &::before {
+        animation:
+          slide-bottom 0.4s ease-in-out 6s forwards,
+          message-1__eye-1 0.4s ease-in-out 6.4s 2 alternate forwards,
+          slide-bottom 0.4s ease-in-out 7.3s reverse forwards;
+      }
+      &::after {
+        animation:
+          slide-top 0.4s ease-in-out 6s forwards,
+          message-1__eye-2 0.4s ease-in-out 6.4s 2 alternate forwards,
+          message-1__end 0.4s ease-in-out 7.3s forwards;
+      }
+    }
+  }
+}
+.message-3[data-state="start"] {
+  .inner {
+    &::before, img { animation-play-state: running; }
+    .eye {
+      &::before, &::after { animation-play-state: running; }
+    }
+  }
+}
+.message-3[data-state="stop"] {
+  .inner {
+    &::before, img { animation-play-state: paused; }
+    .eye {
+      &::before, &::after { animation-play-state: paused; }
+    }
+  }
+}
+}
