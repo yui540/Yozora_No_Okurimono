@@ -1,0 +1,31 @@
+@keyframes chapter-1__kouza-1 {
+  from { transform: scale(40, 10) rotateY(0deg) translate(500%, -500%); }
+  to   { transform: scale(1) rotateY(720deg) translate(0%, 0%); }
+}
+@keyframes chapter-1__kouza-2 {
+  from { transform: scale(40, 10) rotateY(0deg) translate(-500%, 500%); }
+  to   { transform: scale(1) rotateY(-720deg) translate(0%, 0%); }
+}
+
+@keyframes chapter-1__sitename-1 {
+  from { transform: scale(5) rotateX(0deg) rotateY(0deg) translate(-50vw, -200%); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg) translate(0%, 0%); opacity: 1; }
+}
+@keyframes chapter-1__sitename-2 {
+  from { transform: scale(5) rotateX(0deg) rotateY(0deg) translate(50vw, 200%); opacity: 0; }
+  to   { transform: scale(1) rotateX(-360deg) rotateY(-360deg) translate(0%, 0%); opacity: 1; }
+}
+
+@keyframes chapter-1__roll-number-2 {
+  from { transform: translateY(0); }
+  to   { transform: translateY(40%); }
+}
+@keyframes chapter-1__show-number {
+  from { opacity: 0; }
+  to   { opacity: 0.5; }
+}
+
+@keyframes chapter-1__fail-deco {
+  from { transform: translateY(-100%) rotate(0deg); }
+  to   { transform: translateY(100vh) rotate(360deg); }
+}
