@@ -60,6 +60,9 @@
   },
   "dependencies": {
     "axios": "0.18.0",
+    "basic-auth": "2.0.1",
+    "basic-auth-connect": "1.0.0",
+    "express": "4.16.3",
     "highlightjs": "9.10.0",
     "marked": "0.5.1",
     "react": "16.4.1",
