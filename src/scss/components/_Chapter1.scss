@@ -571,12 +571,23 @@
       animation:
         fadein 1s cubic-bezier(0.16, 0.46, 0.18, 1.01) 2.1s forwards,
         slide-top 1s cubic-bezier(0.16, 0.46, 0.18, 1.01) 2.1s forwards;
-
-      .inner { animation: chapter-1__roll-number 1.5s cubic-bezier(0.82, 0.04, 0.2, 1) 5.5s forwards; }
     }
   }
 
   &::before { animation: chapter-1__show-number 1.5s ease-in 5.5s forwards; }
+}
+
+.chapter-1 .opening {
+  .inner { animation: chapter-1__roll-number-1 1.5s cubic-bezier(0.82, 0.04, 0.2, 1) 5.5s forwards; }
+}
+.chapter-2 .opening {
+  .inner { animation: chapter-1__roll-number-2 1.5s cubic-bezier(0.82, 0.04, 0.2, 1) 5.5s forwards; }
+}
+.chapter-3 .opening {
+  .inner { animation: chapter-1__roll-number-3 1.5s cubic-bezier(0.82, 0.04, 0.2, 1) 5.5s forwards; }
+}
+.chapter-4 .opening {
+  .inner { animation: chapter-1__roll-number-4 1.5s cubic-bezier(0.82, 0.04, 0.2, 1) 5.5s forwards; }
 }
 
 .chapter__bg {
