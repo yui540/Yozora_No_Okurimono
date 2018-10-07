@@ -1,0 +1,47 @@
+html, body { margin: 0; }
+
+.wrap {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap .bar {
+  width: 300px; height: 50px;
+  margin: 10px 0;
+  background-color: #ccc;
+}
+
+/***************************************************************
+  animation
+****************************************************************/
+.wrap .bar:nth-child(1) {
+  animation: show-bar 1s linear 0s forwards;
+}
+.wrap .bar:nth-child(2) {
+  animation: show-bar 1s ease 0s forwards;
+}
+.wrap .bar:nth-child(3) {
+  animation: show-bar 1s ease-in 0s forwards;
+}
+.wrap .bar:nth-child(4) {
+  animation: show-bar 1s ease-out 0s forwards;
+}
+.wrap .bar:nth-child(5) {
+  animation: show-bar 1s ease-in-out 0s forwards;
+}
+.wrap .bar:nth-child(6) {
+  animation: show-bar 1s cubic-bezier(0.87, -0.01, 0.1, 0.99) 0s forwards;
+}
+
+/***************************************************************
+  keyframes
+****************************************************************/
+@keyframes show-bar {
+  from { width: 0; background-color: #eee; }
+  to   { width: 330px; background-color: #1b9097; }
+}

@@ -1,0 +1,16 @@
+html, body { margin: 0; }
+
+.link {
+  position: absolute;
+  top: 50%; left: 50%;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: #444;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease 0s;
+}
+.link:hover { box-shadow: 0 0 30px rgba(0,0,0,0.2); }

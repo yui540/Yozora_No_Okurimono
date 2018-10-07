@@ -26,7 +26,7 @@ export default class chapter1 extends Component {
     changeChapter()
     closeMenu()
 
-    axios.get('/markdown/3.md')
+    axios.get('/3.md')
       .then(res => {
         this.setState({ text: marked(res.data) })
       })
