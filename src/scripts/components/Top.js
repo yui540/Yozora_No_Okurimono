@@ -110,6 +110,9 @@ export default ({ openMenu, effect }) => (
         </a>
       </div>
     </div>
+    <a className="share" href="http://twitter.com/intent/tweet?url=https://yozora.magical-girl.site&text=『ようこそ----臆病な魔女教団へ。』 / @yui540" rel="noopener noreferrer" target="_blank">
+      <img src="./images/share.png" alt="Twitterでシェアする" />
+    </a>
     <div className="top__menu">
       <div className="inner">
         <button type="button" onClick={openMenu}>

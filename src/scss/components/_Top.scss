@@ -208,6 +208,24 @@
 }
 
 /**
+ * share
+ */
+.share img {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  @include pc-layout {
+    bottom: 30px; right: 30px;
+    height: 75px;
+  }
+  @include sp-layout {
+    bottom: 35vmin; left: 50%;
+    height: 45px;
+    transform: translateX(-50%);
+  }
+}
+
+/**
  * menu
  */
 .top__menu {
@@ -500,3 +518,4 @@
 .top__menu { animation: fadein 2.5s ease 2.5s forwards; }
 .top__virtual-neet { animation: fadein 2.5s ease 2.9s forwards; }
 .top__sns { animation: fadein 2.5s ease 3.3s forwards; }
+.share img { animation: fadein 2.5s ease 3.7s forwards; }
